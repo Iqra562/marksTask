@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            /* border: 1px solid black; */
+                height: 400px;
+                width: 300px;
+        }
+        td,tr{
+              border: 1px solid black;
+              height: 100px;
+              width: 300px;
+              text-align: center;
+        }
+        .sm{
+            /* border: 1px solid black; */
+            margin-top: 20px;
+            /* height: 100px; */
+            /* width: 100px; */
+        }
+      
+    </style>
+</head>
+<body>
+    <label for="">Enter your Marks:</label>
+    <br><br>
+    <label for="">Chemistry</label>
+    <input type="text" name="" id="che">
+    <label for="">Physics</label>
+    <input type="text" name="" id="phy">
+    <label for="">Math</label>
+    <input type="text" name="" id="math">
+    <label for="">Bio</label>
+    <input type="text" name="" id="bio">
+    <label for="">Computer</label>
+    <input type="text" name="" id="com">
+    <button onclick="sub()">Click</button>
+    <br><br>
+
+    <div id="main">
+        <table>
+            <tr>
+                <td>Che</td>
+                <td>100</td>
+                <td id="chem">-</td>
+            </tr>
+            <tr>
+                <td>Phy</td>
+                <td>100</td>
+                <td id="phys">-</td>
+            </tr>
+            <tr>
+                <td>Math</td>
+                <td>100</td>
+                <td id="mathe">-</td>
+            </tr>
+            <tr>
+                <td>Bio</td>
+                <td>100</td>
+                <td id="biol">-</td>
+            </tr>
+            <tr>
+                <td>Com</td>
+                <td>100</td>
+                <td id="comp">-</td>
+            </tr>
+        </table>
+        <div id=""><h2>Total Mark =</h2> 500</div>
+        <div id="ob"><h2>Obatin Mark =</h2> </div>
+        <div id="pr"><h2>Percentage=</h2></div>
+        <div id="gr"><h2>Grade=</h2></div>
+        
+    </div>
+    <script>
+        function sub(){
+         let a =   parseInt(document.getElementById("che").value);
+         let a1 = document.getElementById("chem").innerHTML= a;
+         let b =   parseInt( document.getElementById("phy").value);
+         let b1 = document.getElementById("phys").innerHTML= b;
+         let c =   parseInt( document.getElementById("math").value);
+         let c1 = document.getElementById("mathe").innerHTML= c;
+         let d =   parseInt( document.getElementById("bio").value);
+         let d1 = document.getElementById("biol").innerHTML= d;
+         let e =   parseInt( document.getElementById("com").value);
+         let e1 = document.getElementById("comp").innerHTML= e;
+         let Obatin = a+b+c+d+e;
+        let obt =  document.getElementById("ob").innerHTML += Obatin;
+          let percentage = Obatin/500*100;
+           document.getElementById("pr").innerHTML += percentage+"%";
+         if(percentage>=90){
+             document.getElementById("gr").innerHTML +="A1";
+         }
+         else if(percentage>=80){
+             document.getElementById("gr").innerHTML +="A+";
+         }
+         else if(percentage>=70){
+             document.getElementById("gr").innerHTML +="A";
+         }
+         else if(percentage>=60){
+             document.getElementById("gr").innerHTML +="B";
+         }
+         else if(percentage>=50){
+             document.getElementById("gr").innerHTML +="c";
+         }
+         else if(percentage>=40){
+             document.getElementById("gr").innerHTML +="d";
+         }
+         else if(percentage>=30){
+             document.getElementById("gr").innerHTML +="e";
+         }
+         else if(percentage>=20){
+             document.getElementById("gr").innerHTML +="f";
+         }
+         else {
+             document.getElementById("gr").innerHTML +="fail";
+         }
+        
+        }
+    </script>
+</body>
+</html>
